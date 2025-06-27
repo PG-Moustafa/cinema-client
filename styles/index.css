@@ -1,0 +1,162 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction:  row;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh;
+}
+
+.logo {
+    /* width: 15vw; */
+    width: 16dvw;
+    height: auto;
+    padding-left: 5%;
+}
+
+.menu {
+    width: 3vw;
+    height: auto;
+    padding-top: 1.2vh;
+    padding-right: 5%;
+}
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90dvh;
+    background-color: black;
+    color: white;
+}
+
+.title11 { 
+    color: yellow;
+    font-size: 5vw;
+}
+
+.title12 {
+    color: red;
+    font-size: 8vw;
+}
+
+.button1 {
+    
+}
+
+.button1 button {
+    font-size: 2vw;
+    margin: 2vh;
+    padding: 1vh 3vh;
+    opacity: 0.8;
+    border-radius: 5%;
+    border: none;
+}
+
+.button1 button:hover {
+    cursor: pointer;
+    opacity: 1;
+    
+    
+}
+
+.button11 {
+
+}
+
+.button12 {
+    color: white;
+    background-color: rgb(74, 73, 73);
+}
+
+
+/* Search container */
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3dvh;
+    height: 17vh;
+    background-color: yellow;
+}
+
+.title-find-movie {
+    font-size: 3dvw;
+    margin-bottom: 2vh;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 20vw;
+    margin-bottom: 4vh;
+    border-radius: 3px;
+    padding: 1vh;
+}
+
+.search-bar input {
+    width: 16.5vw;
+    border: none;
+}
+
+.search-bar img {
+    width: 1.5dvw;
+    border: none;
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4vw;
+    padding: 2rem;
+    background-color: #000;
+}
+
+.movie-card {
+    background-color: rgb(182, 179, 179);
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    padding: 5px;
+}
+
+.movie-card img {
+    width: 30vh;
+}
+
+/* media query - mobile */
+
+@media (max-width:480px) {
+
+    .logo {
+
+    }
+
+    .search-container { 
+        height: 10vh;
+    }
+
+}
+
+/* media query - tablet */
+
+@media (max-width:768px) {
+
+    .logo {
+
+    }  
+    
+    .search-container {
+        height: 12vh;
+    }
+}
