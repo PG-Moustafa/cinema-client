@@ -1,0 +1,6 @@
+
+#E50914 (Cinematic Red)
+#1A1A1A (Rich Charcoal)
+#FFD700 (Golden Yellow)
+#FFFFFF (Pure White)
+#121212 (Cinema Black)
