@@ -22,7 +22,6 @@ document.getElementById("loginForm").addEventListener("submit", function() {
 //
 axios.get("http://localhost/cinema%20pr/cinema-server/controllers/MovieController.php")
   .then(response => {
-    
     console.log("All Movies:", response.data);
     // render them in your HTML
   })
