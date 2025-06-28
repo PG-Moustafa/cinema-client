@@ -1,4 +1,56 @@
 
 body {
-    background-color: black;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registerForm {
+    margin-top: 50px;
+    background-color: #111;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 2px solid #e50914;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#registerForm input {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#registerForm input:focus {
+    background-color: #333;
+    outline: none;
+}
+
+#registerForm button {
+    padding: 12px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#registerForm button:hover {
+    background-color: #b20710;
 }

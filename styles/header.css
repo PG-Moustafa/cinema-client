@@ -14,7 +14,9 @@ body {
     background-color: black;
     align-items: center;
     justify-content: space-between;
-    padding: 1vh;
+    padding: 3vh;
+    width: 100%;
+    border-bottom: 2px solid red;
 }
 
 .logo {
@@ -22,6 +24,7 @@ body {
     width: 16dvw;
     height: auto;
     padding-left: 5%;
+    cursor: pointer;
 }
 
 .menu {
@@ -29,6 +32,7 @@ body {
     height: auto;
     padding-top: 1.2vh;
     padding-right: 5%;
+    cursor: pointer;
 }
 
 /* media query - mobile */

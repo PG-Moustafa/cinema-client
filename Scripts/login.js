@@ -1,34 +1,38 @@
 
-
-// Go home page
 const homePage = document.getElementById("homePage");
+
 homePage.addEventListener("click", () => {
     window.location.href = "../index.html";})
 
-// login submit
+
 document.getElementById("loginForm").addEventListener("submit", function() {
-    
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
 
-    if (email === "" && password === "") {
-        sessionStorage.setItem("loggedInUser", email);
-        window.location.href = "home.html";
-    } else {
-        alert("Invalid email or password");
-    }
-});
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-//
-axios.get("http://localhost/cinema%20pr/cinema-server/controllers/MovieController.php")
+  if (email === "" || password === "") {
+      alert("Please enter both email and password.");
+      return;
+  }
+
+  axios.post("http://localhost/cinema%20pr/cinema-server/controllers/login.php", {
+      email,
+      password
+  })
   .then(response => {
-    console.log("All Movies:", response.data);
-    // render them in your HTML
+      const data = response.data;
+
+      console.log("success");
+      
+      sessionStorage.setItem("loggedInUser", data.email);
+      window.location.href = "../index.html";
   })
   .catch(error => {
-    console.error("Error fetching movies:", error);
+      if (error.response && error.response.data) {
+          alert(error.response.data.error);
+      } else {
+          alert("Login failed. Please try again.");
+      }
+      console.error("Login error:", error);
   });
-
-
-
-
+});
