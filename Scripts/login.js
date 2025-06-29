@@ -5,8 +5,9 @@ homePage.addEventListener("click", () => {
     window.location.href = "../index.html";})
 
 
-document.getElementById("loginForm").addEventListener("submit", function() {
-
+document.getElementById("loginForm").addEventListener("submit", function() 
+{
+    
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 

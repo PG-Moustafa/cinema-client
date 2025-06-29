@@ -3,6 +3,8 @@ const homePage = document.getElementById("homePage");
 homePage.addEventListener("click", () => {
     window.location.href = "../index.html";})
 
+alert("Hello from register page");
+
 document.getElementById("registerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -13,6 +15,9 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
         password: document.getElementById("password").value,
         birthdate: document.getElementById("birthdate").value
     };
+
+    //
+    console.log("hello test");
 
     axios.post("http://localhost/cinema%20pr/cinema-server/controllers/register.php", 
         data)
