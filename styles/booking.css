@@ -1,5 +1,52 @@
-
 body {
     background-color: black;
+    font-family: Arial, sans-serif;
     color: white;
+    text-align: center;
+}
+
+.screen {
+    background-color: #3b3b6c;
+    height: 10px;
+    width: 60%;
+    margin: 40px auto 20px;
+    border-radius: 5px;
+}
+
+.seats-container {
+    display: grid;
+    grid-template-columns: repeat(12, 35px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #3b3b6c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seat.selected {
+    background-color: #da3021;
+}
+
+.booking-actions {
+    margin-top: 20px;
+}
+
+.confirm-btn {
+    margin-top: 6vh;
+        padding: 1.2vh 4vw;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: black;
+        background: rgb(206, 163, 5);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px #ffd50080;
 }
