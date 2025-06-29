@@ -6,6 +6,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    overflow-x: hidden;
 }
 
 .div1 {
@@ -16,45 +18,55 @@ body {
     height: 90dvh;
     background-color: black;
     color: white;
+    text-align: center;
+    gap: 5vh;
 }
 
 .title11 { 
     color: yellow;
     font-size: 5vw;
+    font-weight: bold;
+    text-shadow: 0 0 3px yellow;
 }
 
 .title12 {
     color: red;
-    font-size: 8vw;
+    font-size: 7vw;
+    font-weight: bold;
+    text-shadow: 0 0 15px red;
 }
 
 .button1 {
-    
+    padding: 4%;
+    display: flex;
+    gap: 2vw;
 }
 
 .button1 button {
-    font-size: 2vw;
-    margin: 2vh;
+    font-size: 1.5vw;
     padding: 1vh 3vh;
-    opacity: 0.8;
-    border-radius: 5%;
     border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Button hover effect */
 .button1 button:hover {
-    cursor: pointer;
+    transform: scale(1.1);
     opacity: 1;
-    
-    
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
-.button11 {
+.login-btn {
+    background-color: #ffd500;
+    color: black; }
 
-}
-
-.button12 {
-    color: white;
-    background-color: rgb(74, 73, 73);
+.register-btn {
+    background-color: #ff1c1c;
+    color: white;     
 }
 
 
@@ -94,7 +106,9 @@ body {
     border: none;
 }
 
-.movies-container {
+/* show movies */
+
+.movie-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -104,15 +118,53 @@ body {
 }
 
 .movie-card {
-    background-color: rgb(182, 179, 179);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
     width: 200px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     padding: 5px;
+    color: white;
+}
+
+.movie-card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
 .movie-card img {
-    width: 30vh;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
 }
 
+.movie-card h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0.2rem;
+    text-align: center;
+}
 
+.movie-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* page controller bar */
+
+.pages-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: white;
+}
+
+.pages-controls button {
+    padding: 5px 10px;
+    cursor: pointer;
+}

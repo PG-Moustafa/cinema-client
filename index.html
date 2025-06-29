@@ -13,15 +13,20 @@
 
     <div class="header">
         <img id="homePage" class="logo" src="./Assets/logo- no bg.png" alt="logo">
-        <img class="menu" src="./Assets/icons/menu_white.png" alt="menu-icon">
+        <div class="header-links">
+            <a href="">Movies</a>
+            <a href="">Booking</a>
+        </div>
+        <img id="profilePage" class="profile-icon" src="./Assets/icons/user.png" alt="profile">
+        <img id="burgerMenu" class="menu" src="./Assets/icons/menu_white.png" alt="menu-icon">
     </div>
 
     <div class="div1">
-        <p class="title11">Book. Watch.</p>
+        <p id="welcomeMsg" class="title11">Book. Watch.</p>
         <p class="title12">Enjoy CineNow.</p>
         <div class="button1">
-            <button id="loginPage" class="button11">Login</button>
-            <button id="registerPage" class="button12">Register</button>
+            <button id="loginPage" class="login-btn">Login</button>
+            <button id="registerPage" class="register-btn">Register</button>
         </div>
     </div>
 
@@ -37,65 +42,22 @@
 
     </div>
 
-    <div class="movies-container">
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
+    <!-- show movies -->
+    <div id="movieContainer" class="movie-grid"></div>
 
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
-
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
-
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
-
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
-
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
-
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
-
-        <div class="movie-card">
-            <img src="./Assets/movies/1.webp" alt="movie-poster">
-            <p>Elio</p>
-            <p>Language: English</p>
-            <p>...</p>
-        </div>
+    <!-- pages conroller -->
+    <div id="pages-controller" class="pages-controls">
+        <button id="prevPage">Previous</button>
+        <span id="pageIndicator">Page 1</span>
+        <button id="nextPage">Next</button>
     </div>
 
+    <!-- footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CineNow. All rights reserved.</p>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="Scripts/index.js"></script>
 </body>
 
