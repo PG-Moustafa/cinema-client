@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/Admin/users-dashboard.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <p class="admin" id="admin-btn">Admin</p>
+        <img id="homePage" class="logo" src="../../Assets/logo- no bg.png" alt="logo">
+        <div class="header-links">
+            <a href="./users-dashboard.html">Users</a>
+            <a href="">Movies</a>
+            <a href="">Bookings</a>
+        </div>
+        <img id="profilePage" class="profile-icon" src="../../Assets/icons/user.png" alt="profile">
+        <img id="burgerMenu" class="menu" src="../../Assets/icons/menu_white.png" alt="menu-icon">
+    </div>
+
+    <div class="div1">
+        <h1>Users Dashboard</h1>
+        <button id="addUserBtn" class="addUser-btn">Add User</button>
+    </div>
+
+
+    <div class="user-dashboard">
+        <table class="user-table" id="userTable">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Birthdate</th>
+            </tr>
+
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../Scripts/Admin/user-dashboard.js"></script>
+</body>
+
+</html>
