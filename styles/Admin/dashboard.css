@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.admin {
+    cursor: pointer;
+    
+}
+
+.admin:hover {
+    color: red;
+}

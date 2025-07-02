@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../styles/header.css">
-    <link rel="stylesheet" href="../../styles/Admin/dashboard.css">
+    <link rel="stylesheet" href="../../styles/Admin/addUser.css">
 </head>
 
 <body>
@@ -24,10 +24,11 @@
     </div>
 
 
-    <h1>Admin Dashboard</h1>
-
-
-    <script src="../../Scripts/Admin/dashboard.js"></script>
-</body>
-
-</html>
+    <form id="registerForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Phone" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="date" id="birthdate" required />
+        <button type="submit">Add User</button>
+    </form>
