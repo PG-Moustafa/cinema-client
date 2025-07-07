@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // show movies
     axios.get("http://localhost/cinema-project/cinema-server/movies")
         .then(response => {
-            movies = response.data;
+            
+            movies = response.data.payload;
             renderMovies();
             //
         })
