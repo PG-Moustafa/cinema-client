@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    axios.get(`http://localhost/cinema%20pr/cinema-server/controllers/MovieController.php?id=${movieId}`)
+    axios.get(`http://localhost/cinema-project/cinema-server/movie?id=${movieId}`)
     .then(response => {
         const movie = response.data;
         container.innerHTML = `

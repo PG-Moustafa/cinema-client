@@ -1,15 +1,13 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-        
-    // go to home page
+    
     const homePage = document.getElementById("homePage");
     homePage.addEventListener("click", () => {
-        window.location.href = "../index.html";})
+        window.location.href = "../index.html";
+    });
 
-    // login handling
-    document.getElementById("loginForm").addEventListener("submit", function(e) 
-    {
-        e.preventDefault(); 
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
@@ -18,37 +16,33 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        axios.post("http://localhost/cinema%20pr/cinema-server/controllers/login.php", {
-            email,
-            password
-        })
-        .then(response => {
-            const data = response.data;
+        const formData = buildLoginFormData(email, password);
 
-            console.log("success");
-            
-            sessionStorage.setItem("loggedInUser", JSON.stringify({
-                id: data.id,
-                name: data.name,
-                email: data.email,
-                phone: data.phone,
-                birthdate: data.birthdate,
-            }));
-            window.location.href = "../index.html";
-        })
-        .catch(error => {
-            if (error.response && error.response.data) {
-                alert(error.response.data.error);
-            } else {
-                alert("Login failed. Please try again.");
-            }
-            console.error("Login error:", error);
-        });
+        axios.post("http://localhost/cinema-project/cinema-server/login", formData)
+            .then(response => {
+                const data = response.data;
+
+                sessionStorage.setItem("loggedInUser", JSON.stringify({
+                    id: data.id,
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    birthdate: data.birthdate,
+                }));
+
+                window.location.href = "../index.html";
+            })
+            .catch(error => {
+                const message = error?.response?.data?.error || "Login failed. Please try again.";
+                alert(message);
+                console.error("Login error:", error);
+            });
     });
 
-
-    
-
-
-
+    function buildLoginFormData(email, password) {
+        const formData = new FormData();
+        formData.append("email", email);
+        formData.append("password", password);
+        return formData;
+    }
 });

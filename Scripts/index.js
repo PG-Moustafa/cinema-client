@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let movies = [];
 
     // show movies
-    axios.get("http://localhost/cinema%20pr/cinema-server/controllers/MovieController.php")
+    axios.get("http://localhost/cinema-project/cinema-server/movies")
         .then(response => {
             movies = response.data;
             renderMovies();

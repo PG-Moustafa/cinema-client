@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const homePage = document.getElementById("homePage");
@@ -10,16 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("registerForm").addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const data = {
-            name: document.getElementById("name").value.trim(),
-            email: document.getElementById("email").value.trim(),
-            phone: document.getElementById("phone").value.trim(),
-            password: document.getElementById("password").value,
-            birthdate: document.getElementById("birthdate").value
-        };
+        const formData = new FormData();
+        formData.append("name", document.getElementById("name").value.trim());
+        formData.append("email", document.getElementById("email").value.trim());
+        formData.append("phone", document.getElementById("phone").value.trim());
+        formData.append("password_hash", document.getElementById("password").value);
+        formData.append("birthdate", document.getElementById("birthdate").value);
 
-        axios.post("http://localhost/cinema%20pr/cinema-server/controllers/register.php", 
-            data)
+
+        axios.post("http://localhost/cinema-project/cinema-server/register", 
+            formData)
             .then(response => {
                 alert("Registration successful!");
                 window.location.href = "login.html";
@@ -30,10 +29,4 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     });
 
-
-});
-
-
-
-
-        
+}); 
